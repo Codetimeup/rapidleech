@@ -112,6 +112,7 @@ class d4shared_com extends DownloadClass {
 		$post['password'] = urlencode($pass);
 		$post['remember'] = 'false';
 		$post['doNotRedirect'] = 'true';
+		$post['_remember'] = 'on';
 		$page = $this->GetPage($postURL, $this->cookie, $post, $postURL);
 
 		is_present($page, 'Invalid e-mail address or password', 'Login Failed: Invalid Username/Email or Password.');
